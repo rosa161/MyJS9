@@ -11,12 +11,56 @@
     <h1>數字迴圈</h1>
     <script>
         // 數字迴圈(1+2+3+4+5+6+7+8+9+10)
-        document.write("<hr>");
-        for (var i = 1; i <= 10; i = 1 + i) {
-            document.write(i + (i+1));
+
+        var s = 0;
+        for (var i = 1; i <= 10; i++) {
+            s = s + i;
         }
+        document.write("1+2+3+.....+10=" + s + "<br>");
 
         document.write("<hr>");
+
+        // 請統計1-100之間的奇數合?
+        document.write("請統計1-100之間的奇數合?<br>")
+        var s = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 2 == 1)
+                s = s + i;
+        }
+        document.write("1-100之間的奇數合=" + s)
+        document.write("<hr>");
+
+        // 請統計100-1之間的偶數合?
+        // i = 100 => s = i - 2=98
+        // i = 98  => s = i - 2=96
+        // i = 96  => s = i - 2=94
+        document.write("請統計100-1之間的偶數合?<br>")
+        var s = 0;
+        for (var i = 100; i >= 1; i = i - 2) {
+            s = s + i;
+        }
+        document.write("100-1之間的偶數合=" + s);
+        document.write("<hr>");
+
+        // // 請統計1-100之間的3的倍數同時也是5的倍數合?
+        document.write("1-100之間的3的倍數同時也是5的倍數合?<br>")
+        var s3 = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 == 0) {
+                if (i % 5 == 0) {
+                    s3 = s3 + i;
+                    if (i == 90) {
+                        document.write(i + "=");
+                    } else {
+                        document.write(i + "+")
+                    }
+                }
+            }
+        }
+        document.write(s3)
+
+
+
     </script>
 </body>
 
