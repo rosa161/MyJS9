@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>For迴圈</h1>
+    <script>
+        var s1 = 0;
+        for (var i = 1; i <= 5; i++) {
+            s1 = s1 + i;
+        }
+        document.write(`1+2+3+4+5=${s1}`);
+    </script>
+    <hr>
+
+
+    <h1>While迴圈</h1>
+    <script>
+        var s2 = 0
+        var num = 0;
+        while (num < 5) {
+            num++;
+            s2 = s2 + num;
+        }
+        document.write(`1+2+3+4+5= ${s2}`);
+    </script>
+    <hr>
+
+
+    <h1>do While迴圈</h1>
+    <!-- do while => 先執行再檢查 -->
+    <script>
+        var s3 = 0
+        var num = 1;
+        do {
+            s3 = s3 + num;
+            num++;
+        } while (num <= 5);
+        document.write(`1+2+3+4+5= ${s3}`);
+    </script>
+    <hr>
+
+
+    <h1>循環輸入</h1>
+    <script>
+        do {
+            var month = prompt("請輸入月份");
+            if (month == null) {
+                break;
+            } else if (month == "") {
+                alert("月份不能空白,請重新輸入");
+                continue; //忽略以下程式敘述,回到迴圈開始的位置
+            } else if (month < 1 || month > 12) {
+                alert("輸入月份範圍錯誤,請重新輸入");
+                continue;
+            } else if (isNaN(Number(month))){
+                alert("非數值,請重新輸入");
+                continue;
+        }
+            alert("輸入的月份為:" + month);
+        } while (1);
+
+    </script>
+
+</body>
+
+</html>
