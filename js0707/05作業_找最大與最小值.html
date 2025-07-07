@@ -40,12 +40,44 @@
         let max3 = arr1[0];
         let min3 = arr1[0];
 
-        arr1.forEach((n)=> {
+        arr1.forEach((n) => {
             if (n > max3) max3 = n;
             if (n < min3) min3 = n;
         });
         console.log("最大值：" + max3);
         console.log("最小值：" + min3);
+
+        // 寫法四map
+        console.log("map");
+        max = arr1[0];
+        min = arr1[0];
+
+        arr1.map((n) => {
+            if (n > max) {
+                max = n;
+            } else if (n < min) {
+                min = n;
+            }
+        })
+        console.log(`max=${max},min=${min}`);
+
+        // 寫法五sort
+        console.log("sort");
+        arr1.sort((a, b) => {
+            return a - b;
+        })
+        console.log(arr1);
+        console.log(`max=${arr1[arr1.length - 1]}, min=${arr1[0]}`);
+
+
+        // 數學類別
+        // 最大值 => Math.max()
+        // 最小值 => Math.min()
+        console.log("數學類別");
+        max = Math.max(...arr1);
+        min = Math.min(...arr1);
+        console.log(`max=${max},min=${min}`);
+
     </Script>
 
 </body>
