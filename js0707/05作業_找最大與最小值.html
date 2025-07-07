@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <Script>
+        let arr1 = [5, 60, 3, 90, 33, 1, 100];
+        console.log("原陣列：" + arr1);
+
+        // for
+        console.log("for----");
+        let max1 = arr1[0];
+        let min1 = arr1[0];
+        for (let i = 1; i < arr1.length; i++) {
+            if (arr1[i] > max1) max1 = arr1[i];
+            if (arr1[i] < min1) min1 = arr1[i];
+        }
+        console.log("最大值：" + max1);
+        console.log("最小值：" + min1);
+
+
+        // for of
+        console.log("for--of--");
+        let max2 = arr1[0];
+        let min2 = arr1[0];
+        for (let n of arr1) {
+            if (n > max2) max2 = n;
+            if (n < min2) min2 = n;
+        }
+        console.log("最大值：" + max2);
+        console.log("最小值：" + min2);
+
+        // forEach
+        console.log("forEach------");
+        let max3 = arr1[0];
+        let min3 = arr1[0];
+
+        arr1.forEach((n)=> {
+            if (n > max3) max3 = n;
+            if (n < min3) min3 = n;
+        });
+        console.log("最大值：" + max3);
+        console.log("最小值：" + min3);
+    </Script>
+
+</body>
+
+</html>
