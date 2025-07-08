@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>產生樂透號碼</h2>
+    <p>
+        <button onclick="arr1()">威力彩</button>
+        <button onclick="arr2()">大樂透</button>
+        <button onclick="arr4()">今彩539</button>
+    </p>
+
+    <p id="sortBefore">排序前號碼</p>
+    <p id="sortAfter">排序後號碼</p>
+    <p id="secNo">第二區號碼</p>
+
+    <script>
+
+        function arr1() {
+            console.log("---威力彩---")
+            // 威力彩=>第一區
+            // 在1-38裡取6個亂數
+            let arr1 = [];
+            for (let i = 0; arr1.length < 6; i++) {
+                let num = Math.floor(Math.random() * 38 + 1);
+                if (!arr1.includes(num)) {
+                    arr1.push(num);
+                }
+            }
+
+            // 未排序
+            console.log(`你的威力彩號碼是:${arr1}(未排序)`)
+            sortBefore.textContent = "排序前號碼：" + arr1
+            // 排序
+            arr1.sort((a, b) => a - b)
+            console.log(`你的威力彩號碼是:${arr1}(排序)`)
+            sortAfter.textContent = "排序後號碼：" + arr1
+
+            // 威力彩=>第二區
+            // 在1~8裡取1個亂數
+            let num2 = Math.floor(Math.random() * 8) + 1;
+            console.log(`你的特別號是:${num2}`)
+            secNo.textContent = "第二區號碼：" + num2
+
+            // let sortBefore = document.getElementById("sortBefore");
+            // let sortAfter = document.getElementById("sortAfter");
+            // let num = document.getElementById("num");
+        }
+
+        function arr2() {
+            console.log("---大樂透---")
+            // 大樂透=>第一區
+            // 在1-49裡取6個亂數
+            let arr2 = [];
+            for (let i = 0; arr2.length < 6; i++) {
+                let num3 = Math.floor(Math.random() * 49 + 1);
+                if (!arr2.includes(num3)) {
+                    arr2.push(num3);
+                }
+            }
+            // 未排序
+            console.log(`你的大樂透號碼是:${arr2}(未排序)`)
+            sortBefore.textContent = "排序前號碼：" + arr2
+            // 排序
+            arr2.sort((a, b) => a - b)
+            console.log(`你的大樂透號碼是:${arr2}(排序)`)
+            sortAfter.textContent = "排序後號碼：" + arr2
+
+            // 大樂透=>第二區
+            // 在1~49裡取1個亂數(不能跟第一區重複)
+            let arr3 = [];
+            for (let i = 0; arr3.length < 1; i++) {
+                let num3 = Math.floor(Math.random() * 49 + 1);
+                if (!arr3.includes(num3)) {
+                    arr3.push(num3);
+                }
+            }
+            console.log(`你的特別號是:${arr3}`)
+            secNo.textContent = "第二區號碼：" + arr3
+        }
+
+
+
+        function arr4() {
+            console.log("---今彩---")
+            // 今彩
+            // 在1-39裡取5個亂數
+            let arr4 = [];
+            for (let i = 0; arr4.length < 5; i++) {
+                let num4 = Math.floor(Math.random() * 39 + 1);
+                if (!arr4.includes(num4)) {
+                    arr4.push(num4);
+                }
+            }
+            // 未排序
+            console.log(`你的大樂透號碼是:${arr4}(未排序)`)
+            sortBefore.textContent = "排序前號碼：" + arr4
+            // 排序
+            arr4.sort((a, b) => a - b)
+            console.log(`你的大樂透號碼是:${arr4}(排序)`)
+            sortAfter.textContent = "排序後號碼：" + arr4
+
+            // 今彩沒有第二區, 所以清除
+            secNo.textContent = "";
+        }
+
+
+    </script>
+</body>
+
+</html>
