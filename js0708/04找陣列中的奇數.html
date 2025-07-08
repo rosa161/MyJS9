@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr1 = [1, 6, 7, 100, 234]
+        // 方法1: 使用for
+        console.log("for----");
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] % 2 !== 0) {
+                console.log(`奇數找到了,在第${i + 1}個位置`);
+            }
+        }
+
+        // 方法2: 使用map [此題目不建議用map]
+        // let arr3 = arr1.map((n) => {
+        //     if (n % 2 != 0) {
+
+        //     }
+        // })
+        // console.log(arr3);
+
+        // 方法3: 使用filter (只留下符合條件的元素) 
+        console.log("filter----");
+        let arr3 = arr1.filter((n) => {
+            if (n % 2 !== 0) {
+                return true;
+            }
+        })
+        console.log(arr3);
+
+        // filter簡化
+        console.log("filter----簡化");
+        let arr4 = arr1.filter((n) => {
+            return n % 2 !== 0;
+        })
+        console.log(arr4);
+
+        // filter 再簡化
+        console.log("filter----【再】簡化");
+        let arr5 = arr1.filter((n) => n % 2 !== 0)
+        console.log(arr5);
+
+        // 找出陣列中超過100的值
+        console.log("filter----找出陣列中超過100的值");
+        let arr6 = arr1.filter((n) => {
+            if (n >= 100) {
+                return true;
+            }})
+        console.log(arr6);
+
+        // 找出陣列中超過100的值
+        console.log("filter----找出陣列中超過100的值(簡化)");
+        let arr7 = arr1.filter((n) => n >= 100)
+        console.log(arr7);
+
+    </script>
+
+
+</body>
+
+</html>
