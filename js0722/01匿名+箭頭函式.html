@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 兩數相加
+        function add(n1, n2) {
+            return n1 + n2;
+        }
+        console.log(add(5, 3));
+
+        // 匿名涵式 *目前主流用法
+        let add2 = function (n1, n2) {
+            return n1 + n2;
+        }
+        console.log(add2(10, 8));
+
+        // 用匿名函式算出圓面積
+        let getArea = function (r) {
+            // 建立一個常數的值(consr代表: 執行中的值不能變更, 一旦更改就會出錯)
+            const pi = 3.14; //const好處: 避免執行中被改掉
+            return pi * r * r;
+        }
+        console.log(getArea(10));
+
+        // 箭頭函示 *目前主流用法
+        let getArea2 = (r) => {
+            const pi = 3.14; 
+            return pi * r * r;
+        }
+        console.log(getArea2(10));
+
+
+
+    </script>
+</body>
+
+</html>
