@@ -1,0 +1,77 @@
+@use "reset"; // @use 必須在第一行
+@use "variablis" as *;
+@use "function" as *;
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Ubuntu&display=swap');
+
+@font-face {
+    font-family: Avenue;
+    src: url(../webfonts/Avenue\ de\ Madison.ttf);
+}
+
+@font-face {
+    font-family: Rosaline;
+    src: url(../webfonts/Rosaline.otf);
+}
+
+/*---------- 共用區 ----------*/
+// 區塊標題
+.title {
+    margin: $space-ex 0 $space-xl;
+
+    * {
+        text-align: center;
+    }
+
+    h2 {
+        font-family: $family-en;
+        font-size: $f-s-xxxl;
+        @include border-b;
+        font-weight: $f-w-b;
+    }
+
+    h3 {
+        font-family: $family-tc;
+        font-size: $f-s-lg;
+    }
+}
+
+#contactform {
+    .btn-animat {
+        @extend %btn-animat;
+    }
+}
+
+//按鈕區
+.btn-animat {
+    border-radius: $radius-ex;
+
+}
+
+.icon{
+    a{
+        width: 35px;
+        height: 35px;
+        margin: $space-xxs;
+    }
+
+#topebar{
+    @extend: %flex-between;
+    padding: $space-xs $space-xl;
+}
+
+ul{
+    @extend %flex-end;
+}
+
+.menu{
+padding: $space-x-xs;
+border-radius: $radius-sm;
+
+}
+
+}
+
+
+
+
+

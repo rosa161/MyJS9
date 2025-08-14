@@ -1,0 +1,21 @@
+@use "../variables/" as *;
+@mixin border-b($width:3px,$color:$Cjarcoal){
+    border-bottom: solid $width $color;
+}
+
+@mixin bordered ($width:1px,$color:$lesser-4){
+    border: solid $width $color;
+
+}
+
+@mixin amt ($name , $speed:.75s){
+    animation: $name $speed both;
+}
+
+@mixin glassmorphism{
+    background-image: linear-gradient(to bottom right, $alpha-w-40,$alpha-w-70);
+    @include bordered($width:2px,$color:$alpha-w-40);
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 2px 2px $alpha-b-20,
+    
+}
