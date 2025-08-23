@@ -1,0 +1,15 @@
+@use "reset";
+@use "varuabkes" as *;
+@use "function" as *;
+
+#contact{
+    @extend %flex-center;
+}
+
+#news {
+    @extend %flex-center;
+}
+
+#list-box {
+    @extend %flex-center;
+}

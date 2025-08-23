@@ -1,0 +1,18 @@
+@use "../variables/" as *;
+@use "./mixin" as *;
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%btn-animat{
+    border-radius: $radius-ex;
+    @extend %flex-center;
+    height: 60px;
+    width: 210px;
+    cursor: pointer;
+    margin: $space-md auto;
+    @include bordered;
+}
