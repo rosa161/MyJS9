@@ -18,7 +18,7 @@
     --lesser-3: #cdaaab;
     --lesser-4: #8f6b6d;
     /*透明*/
-    --alpha-w-20: rgba(255, 255, 255, 0.2) ;
+    --alpha-w-20: rgba(255, 255, 255, 0.2);
     /*尺寸*/
     --ex: 99999;
 }
@@ -160,9 +160,17 @@ a {
     text-decoration: none;
 }
 
+/* 區塊標題 */
+.title h3 {
+    font-family: "DXGW WenKai TC";
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
 /* 頁首區 */
 #topbar {
-    position: fixed;/*position權重較重*/
+    position: fixed;
+    /*position權重較重*/
     top: 0;
     left: 0;
     width: 100%;
@@ -190,13 +198,29 @@ div.logo {
 }
 
 /*svg會 自動寬度:fill/ 高度:auto/ 其他點陣圖檔,不會自動fill,要寫background-size */
-.icon-fb {background-image: url(../images/icon-fb.svg);}
-.icon-ig {background-image: url(../images/icon-ig.svg);}
-.icon-line {background-image: url(../images/icon-line.svg);}
+.icon-fb {
+    background-image: url(../images/icon-fb.svg);
+}
 
-.icon-fb:hover {background-image: url(../images/icon-fb-hover.svg);}
-.icon-ig:hover {background-image: url(../images/icon-ig-hover.svg);}
-.icon-line:hover {background-image: url(../images/icon-line-hover.svg);}
+.icon-ig {
+    background-image: url(../images/icon-ig.svg);
+}
+
+.icon-line {
+    background-image: url(../images/icon-line.svg);
+}
+
+.icon-fb:hover {
+    background-image: url(../images/icon-fb-hover.svg);
+}
+
+.icon-ig:hover {
+    background-image: url(../images/icon-ig-hover.svg);
+}
+
+.icon-line:hover {
+    background-image: url(../images/icon-line-hover.svg);
+}
 
 /*主選單*/
 #topbar .menu {
@@ -211,7 +235,8 @@ div.logo {
 
 #topbar .menu a {
     margin: 10px;
-    border-bottom: 2px solid transparent;/*保留hover空間, 以防尺寸變動*/
+    border-bottom: 2px solid transparent;
+    /*保留hover空間, 以防尺寸變動*/
 }
 
 #topbar .menu a:hover {
@@ -221,6 +246,12 @@ div.logo {
 
 /*聯絡我們*/
 #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
     height: 100vh;
     background-color: var(--bg-1);
 }
