@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 漂遊牧「揪團版」Figma 草圖 HTML 結構描述 -->
+
+<!-- 頁面頂部：Slogan + CTA -->
+<header class="w-full bg-yellow-100 py-8 text-center">
+  <h1 class="text-3xl font-bold">一個人沒動力，一起就有趣</h1>
+  <p class="mt-2 text-gray-700">找到旅途中一起吃飯、工作、探索的同伴</p>
+  <button class="mt-4 px-6 py-2 bg-yellow-400 text-white rounded-full">我要發起揪團</button>
+</header>
+
+<!-- 篩選條 -->
+<div class="sticky top-0 bg-white shadow z-10 flex gap-4 px-6 py-3 border-b">
+  <select class="px-4 py-2 border rounded">選擇城市</select>
+  <select class="px-4 py-2 border rounded">選擇主題</select>
+  <select class="px-4 py-2 border rounded">選擇日期</select>
+  <select class="px-4 py-2 border rounded">語言</select>
+  <select class="px-4 py-2 border rounded">顯示已滿團</select>
+</div>
+
+<!-- 揪團卡片牆 -->
+<main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+  <!-- 單一卡片 -->
+  <div class="bg-white shadow rounded-xl overflow-hidden hover:shadow-lg transition">
+    <img src="https://source.unsplash.com/featured/?cowork" alt="活動圖片" class="w-full h-48 object-cover">
+    <div class="p-4">
+      <h2 class="text-lg font-bold">東京一起 co-work｜中文組</h2>
+      <p class="text-sm text-gray-600">6 hrs｜距離 1.2km</p>
+      <div class="mt-2 flex items-center justify-between">
+        <span class="text-xs text-gray-500">已有 5/8 人報名</span>
+        <button class="bg-yellow-400 text-white px-4 py-1 rounded-full text-sm">Join</button>
+      </div>
+    </div>
+  </div>
+  <!-- 可重複以上卡片 -->
+</main>
+
+<!-- CTA 區域 -->
+<section class="text-center py-10 bg-gray-100">
+  <h2 class="text-2xl font-semibold">找不到想參加的？</h2>
+  <p class="mt-2">主動出擊，發起你的第一個揪團！</p>
+  <button class="mt-4 px-6 py-2 bg-yellow-500 text-white rounded-full">點我發起</button>
+</section>
+
+<!-- 主揪牆 + 社交牆（可選） -->
+<footer class="bg-white border-t py-6 px-4">
+  <p class="text-center text-gray-500 text-sm">Nomadrift © 2025｜Made for social nomads</p>
+</footer>
+
+</body>
+</html>
