@@ -1,6 +1,7 @@
 @use "../variables/" as *;
 @use "./mixin" as *;
-
+// extend 也在function 資料夾中, 不可直接調用整個function
+// extend繼承語法都繪置頂
 %flex-center {
     display: flex;
     justify-content: center;
@@ -16,3 +17,13 @@
     margin: $space-md auto;
     @include bordered;
 }
+
+%input-style{
+    // border: 1px solid var(--lesser-3);
+    @include bordered;
+    padding: $space-xs;
+    border-radius: $radius-xxs;
+    color: lesser-4;
+    font-weight: $f-w-w;
+}
+

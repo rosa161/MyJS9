@@ -436,6 +436,10 @@ div.logo {
     margin: 20px 0;
 }
 
+#contact .iframe{
+    height: 300px;
+}
+
 /* 裝飾花朵 */
 #contact figure {
     position: absolute;
